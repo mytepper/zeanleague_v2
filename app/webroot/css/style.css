@@ -1,0 +1,7 @@
+.error-message {
+	color:#a94442;
+}
+div.error input, div.error textarea, div.error select{
+	border:solid 1px #a94442;
+}
+select{min-width: 100px;}

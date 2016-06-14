@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'ThaiSansNeue';
+    src: url('../fonts/ThaiSansNeue-Regular.ttf');
+    src: url('../fonts/ThaiSansNeue-Regular.ttf') format('embedded-opentype'),
+         url('../fonts/ThaiSansNeue-Regular.ttf') format('woff'),
+         url('../fonts/ThaiSansNeue-Regular.ttf') format('truetype');
+}
+body{background-color: #333;font-family: 'ThaiSansNeue';}

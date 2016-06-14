@@ -1,0 +1,273 @@
+2016-06-14 10:13:20 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [/vagrant/www/me/zeanleague/app/Config/database.php, line 78]
+2016-06-14 10:13:20 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+Request URL: /me/zeanleague/
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/www/me...', 78)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/www/me...', 78, Array)
+#2 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/www/me...', 78, Array)
+#3 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-14 10:14:01 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[42000] [1049] Unknown database \'zeanleague_db\'',
+  'enabled' => true,
+)
+Request URL: /me/zeanleague/members/register
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /vagrant/www/me/zeanleague/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /vagrant/www/me/zeanleague/lib/Cake/Model/Model.php(3626): ConnectionManager::getDataSource('default')
+#3 /vagrant/www/me/zeanleague/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /vagrant/www/me/zeanleague/lib/Cake/Model/Model.php(3653): Model->setSource('members')
+#5 /vagrant/www/me/zeanleague/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /vagrant/www/me/zeanleague/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /vagrant/www/me/zeanleague/lib/Cake/View/Helper/FormHelper.php(480): FormHelper->_introspectModel('Member', 'fields')
+#8 /vagrant/www/me/zeanleague/app/View/Members/register.ctp(11): FormHelper->create()
+#9 /vagrant/www/me/zeanleague/lib/Cake/View/View.php(971): include('/vagrant/www/me...')
+#10 /vagrant/www/me/zeanleague/lib/Cake/View/View.php(933): View->_evaluate('/vagrant/www/me...', Array)
+#11 /vagrant/www/me/zeanleague/lib/Cake/View/View.php(473): View->_render('/vagrant/www/me...')
+#12 /vagrant/www/me/zeanleague/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#13 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MembersController), Object(CakeRequest))
+#15 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2016-06-14 10:15:21 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[42000] [1049] Unknown database \'zeanleague_db\'',
+  'enabled' => true,
+)
+Request URL: /me/zeanleague/users/register
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /vagrant/www/me/zeanleague/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /vagrant/www/me/zeanleague/lib/Cake/Model/Model.php(3626): ConnectionManager::getDataSource('default')
+#3 /vagrant/www/me/zeanleague/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /vagrant/www/me/zeanleague/lib/Cake/Model/Model.php(3653): Model->setSource('users')
+#5 /vagrant/www/me/zeanleague/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /vagrant/www/me/zeanleague/lib/Cake/Model/Model.php(1483): Model->schema()
+#7 /vagrant/www/me/zeanleague/lib/Cake/Model/Model.php(1470): Model->hasField('title', false)
+#8 /vagrant/www/me/zeanleague/lib/Cake/Model/Model.php(907): Model->hasField(Array)
+#9 /vagrant/www/me/zeanleague/lib/Cake/Controller/Scaffold.php(130): Model->__get('displayField')
+#10 /vagrant/www/me/zeanleague/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#11 /vagrant/www/me/zeanleague/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#12 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#14 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2016-06-14 10:53:17 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /me/zeanleague/user/resgiter
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-14 10:53:22 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /me/zeanleague/user/resgister
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-14 10:53:30 Error: [MissingActionException] Action UsersController::resgister() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'resgister',
+)
+Request URL: /me/zeanleague/users/resgister
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-06-14 10:53:34 Error: [MissingViewException] View file "Users/register.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/register.ctp',
+)
+Request URL: /me/zeanleague/users/register
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /vagrant/www/me/zeanleague/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-06-14 11:09:29 Error: Fatal Error (1): Call to undefined method View::elements() in [/vagrant/www/me/zeanleague/app/View/Users/register.ctp, line 5]
+2016-06-14 11:09:29 Error: [FatalErrorException] Call to undefined method View::elements()
+Request URL: /me/zeanleague/users/register
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/vagrant/www/me...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/vagrant/www/me...', 5, Array)
+#2 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/vagrant/www/me...', 5, Array)
+#3 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-14 11:31:19 Error: Fatal Error (1): Call to a member function allow() on a non-object in [/vagrant/www/me/zeanleague/app/Controller/UsersController.php, line 16]
+2016-06-14 11:31:19 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /me/zeanleague/users/register
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/vagrant/www/me...', 16)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/vagrant/www/me...', 16, Array)
+#2 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/vagrant/www/me...', 16, Array)
+#3 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-14 11:31:44 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /me/zeanleague/users/login
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-06-14 11:31:51 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /me/zeanleague/users/login
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-06-14 11:51:15 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /me/zeanleague/users/login
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-06-14 11:59:05 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /me/zeanleague/users/login
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-06-14 12:09:30 Error: [MissingViewException] View file "Users/register_send_email.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/register_send_email.ctp',
+)
+Request URL: /me/zeanleague/users/registerSendEmail
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /vagrant/www/me/zeanleague/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-06-14 13:31:02 Error: [MissingViewException] View file "Users/register_send_email.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/register_send_email.ctp',
+)
+Request URL: /me/zeanleague/users/registerSendEmail
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /vagrant/www/me/zeanleague/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-06-14 14:24:32 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [/vagrant/www/me/zeanleague/app/Model/User.php, line 112]
+2016-06-14 14:24:32 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+Request URL: /me/zeanleague/users/register
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/www/me...', 112)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/www/me...', 112, Array)
+#2 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/www/me...', 112, Array)
+#3 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-14 14:25:11 Error: [SocketException] Declaration of User::beforeSave() should be compatible with that of Model::beforeSave()
+Request URL: /me/zeanleague/users/register
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Network/Email/MailTransport.php(51): MailTransport->_mail('bob@example.com', 'Test email', '<!DOCTYPE html ...', 'From: app@domai...', NULL)
+#1 /vagrant/www/me/zeanleague/lib/Cake/Network/Email/CakeEmail.php(1173): MailTransport->send(Object(CakeEmail))
+#2 /vagrant/www/me/zeanleague/app/Model/User.php(117): CakeEmail->send()
+#3 /vagrant/www/me/zeanleague/app/Model/User.php(97): User->sendLinkRegisteredConfirm('4')
+#4 /vagrant/www/me/zeanleague/app/Controller/UsersController.php(27): User->saveRegister(Array)
+#5 [internal function]: UsersController->register()
+#6 /vagrant/www/me/zeanleague/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-06-14 14:27:30 Error: [SocketException] 
+Request URL: /me/zeanleague/users/register
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Network/Email/MailTransport.php(51): MailTransport->_mail('bob@example.com', 'Test email', '<!DOCTYPE html ...', 'From: app@domai...', NULL)
+#1 /vagrant/www/me/zeanleague/lib/Cake/Network/Email/CakeEmail.php(1173): MailTransport->send(Object(CakeEmail))
+#2 /vagrant/www/me/zeanleague/app/Model/User.php(118): CakeEmail->send()
+#3 /vagrant/www/me/zeanleague/app/Model/User.php(98): User->sendLinkRegisteredConfirm('5')
+#4 /vagrant/www/me/zeanleague/app/Controller/UsersController.php(27): User->saveRegister(Array)
+#5 [internal function]: UsersController->register()
+#6 /vagrant/www/me/zeanleague/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-06-14 14:32:44 Error: [SocketException] 
+Request URL: /me/zeanleague/users/register
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Network/Email/MailTransport.php(51): MailTransport->_mail('burapa.s@aware....', 'Test email', '<!DOCTYPE html ...', 'From: you@local...', NULL)
+#1 /vagrant/www/me/zeanleague/lib/Cake/Network/Email/CakeEmail.php(1173): MailTransport->send(Object(CakeEmail))
+#2 /vagrant/www/me/zeanleague/app/Model/User.php(117): CakeEmail->send()
+#3 /vagrant/www/me/zeanleague/app/Model/User.php(98): User->sendLinkRegisteredConfirm('6')
+#4 /vagrant/www/me/zeanleague/app/Controller/UsersController.php(27): User->saveRegister(Array)
+#5 [internal function]: UsersController->register()
+#6 /vagrant/www/me/zeanleague/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-06-14 14:39:51 Error: [MissingControllerException] Controller class MeController could not be found.
+Exception Attributes: array (
+  'class' => 'MeController',
+  'plugin' => NULL,
+)
+Request URL: /me/zeanleague/me/zeanleague/users/registerConfirm?token=cec1b6826c23a7dc2af64b4480b412d7fef931cb
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-14 14:40:05 Error: [MissingViewException] View file "Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/login.ctp',
+)
+Request URL: /me/zeanleague/users/login
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /vagrant/www/me/zeanleague/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-06-14 14:43:18 Error: [MissingViewException] View file "Users/register_confirm.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/register_confirm.ctp',
+)
+Request URL: /me/zeanleague/users/registerConfirm?token=cec1b6826c23a7dc2af64b4480b412d7fef931cb
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /vagrant/www/me/zeanleague/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
