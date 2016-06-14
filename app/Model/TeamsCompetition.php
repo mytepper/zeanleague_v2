@@ -70,7 +70,43 @@ class TeamsCompetition extends AppModel {
 		)
 	);
 
+/**
+ * [saveTeamsCompetition]
+ *
+ * @param array $data TeamsCompetition data
+ * @return array
+ */
 	public function saveTeamsCompetition($data) {
 		return $this->save($data);
+	}
+
+/**
+ * [getTeamsCompetitionsToday]
+ *
+ * @return void
+ */
+	public function getTeamsCompetitionsToday() {
+		return $this->find('all', array(
+			'fields' => array(
+				'TeamsCompetition.id',
+				'TeamsCompetition.team_a_id',
+				'TeamsCompetition.team_b_id',
+				'TeamsCompetition.team_a_score',
+				'TeamsCompetition.team_b_score',
+				'TeamsCompetition.competitions_type_id',
+				'TeamsCompetition.max_score',
+				'TeamsCompetition.rate_id',
+				'TeamsCompetition.team',
+				'CompetitionsType.name',
+				'Rate.name',
+				"(SELECT CONCAT(name, '') FROM teams WHERE teams.id = TeamsCompetition.team_a_id) team_a",
+				"(SELECT CONCAT(logo_image, '') FROM teams WHERE teams.id = TeamsCompetition.team_a_id) team_a_logo",
+				"(SELECT CONCAT(name, '') FROM teams WHERE teams.id = TeamsCompetition.team_b_id) team_b",
+				"(SELECT CONCAT(logo_image, '') FROM teams WHERE teams.id = TeamsCompetition.team_b_id) team_b_logo",
+			),
+			/*'conditions' => array(
+				'DATE(TeamsCompetition.date_time)' => date('Y-m-d')
+			)*/
+		));
 	}
 }

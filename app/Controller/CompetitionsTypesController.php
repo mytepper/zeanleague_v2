@@ -89,7 +89,7 @@ class CompetitionsTypesController extends AppController {
 			}
 		}
 
-		return $this->__setJsonResponse(
+		return $this->setJsonResponse(
 			array(
 				'status' => $status,
 				'imageLogo' => $imageLogo,

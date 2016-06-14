@@ -34,7 +34,7 @@ class AppController extends Controller {
 
 	public $components = array(
 		'Session',
-		'Security',
+		//'Security',
 		'Flash',
 		'Auth' => array(
 			'authenticate' => array(
@@ -51,12 +51,12 @@ class AppController extends Controller {
 	);
 
 /**
- * [__setJsonResponse]
+ * [setJsonResponse]
  *
  * @param array $array response
  * @return json
  */
-	private function __setJsonResponse($array) {
+	public function setJsonResponse($array) {
 		$this->set('json', $array);
 		$this->set('_serialize', array('json'));
 	}

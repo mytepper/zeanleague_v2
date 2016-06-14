@@ -19,6 +19,7 @@
 		echo $this->Html->css('public/bootstrap', array('inline' => true));
 		echo $this->Html->css('public/carousel', array('inline' => true));
 		echo $this->Html->css('public/template', array('inline' => true));
+		echo $this->Html->css('font-awessome', array('inline' => true));
 	?>
 </head>
 <body>
@@ -29,7 +30,7 @@
 		<!-- =============================================== -->
 
 		<!-- Content Wrapper. Contains page content -->
-		<div class="container">
+		<div class="container content-wrapper">
 			<?php echo $this->Flash->render(); ?>
 			<?php echo $this->fetch('content'); ?>
 		</div>

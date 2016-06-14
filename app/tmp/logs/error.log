@@ -357,3 +357,142 @@ Stack Trace:
 #3 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(943): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2016-06-14 14:01:46 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'getTeamsCompetitionsToday' at line 1
+Request URL: /zeanleague_v2/
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/src/zeanleague_v2/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('getTeamsCompeti...', Array)
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Model/Datasource/DboSource.php(664): DboSource->execute('getTeamsCompeti...', Array, Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Model/Datasource/DboSource.php(607): DboSource->fetchAll('getTeamsCompeti...', Array, Array)
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Model/Model.php(827): DboSource->query('getTeamsCompeti...', Array, Object(TeamsCompetition))
+#5 /vagrant/src/zeanleague_v2/app/Controller/PagesController.php(54): Model->__call('getTeamsCompeti...', Array)
+#6 /vagrant/src/zeanleague_v2/app/Controller/PagesController.php(54): TeamsCompetition->getTeamsCompetitionsToday()
+#7 [internal function]: PagesController->index()
+#8 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#9 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#11 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-06-14 14:09:00 Error: [MissingPluginException] Plugin Upload could not be found.
+Exception Attributes: array (
+  'plugin' => 'Upload',
+)
+Request URL: /zeanleague_v2/
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/Core/App.php(227): CakePlugin::path('Upload')
+#1 /vagrant/src/zeanleague_v2/lib/Cake/Core/App.php(549): App::path('Model/Behavior', 'Upload')
+#2 [internal function]: App::load('UploadBehavior')
+#3 [internal function]: spl_autoload_call('UploadBehavior')
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Model/BehaviorCollection.php(120): class_exists('UploadBehavior')
+#5 /vagrant/src/zeanleague_v2/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#6 /vagrant/src/zeanleague_v2/lib/Cake/Model/Model.php(774): BehaviorCollection->init('CompetitionsTyp...', Array)
+#7 [internal function]: Model->__construct(Array)
+#8 /vagrant/src/zeanleague_v2/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#9 /vagrant/src/zeanleague_v2/lib/Cake/Model/Model.php(1077): ClassRegistry::init(Array)
+#10 /vagrant/src/zeanleague_v2/lib/Cake/Model/Model.php(886): Model->_constructLinkedModel('CompetitionsTyp...', 'CompetitionsTyp...', NULL)
+#11 /vagrant/src/zeanleague_v2/lib/Cake/Model/Model.php(919): Model->__isset('CompetitionsTyp...')
+#12 /vagrant/src/zeanleague_v2/lib/Cake/Model/Datasource/DboSource.php(1088): Model->__get('CompetitionsTyp...')
+#13 /vagrant/src/zeanleague_v2/lib/Cake/Model/Model.php(3031): DboSource->read(Object(TeamsCompetition), Array)
+#14 /vagrant/src/zeanleague_v2/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#15 /vagrant/src/zeanleague_v2/app/Model/TeamsCompetition.php(110): Model->find('all', Array)
+#16 /vagrant/src/zeanleague_v2/app/Controller/PagesController.php(54): TeamsCompetition->getTeamsCompetitionsToday()
+#17 [internal function]: PagesController->index()
+#18 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#19 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#20 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#21 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#22 {main}
+2016-06-14 14:52:13 Error: [MissingActionException] Action UsersController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'users',
+)
+Request URL: /zeanleague_v2/users/users/login
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-06-14 14:55:18 Error: [BadRequestException] The request has been black-holed
+Request URL: /zeanleague_v2/users/register
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Component/SecurityComponent.php(243): SecurityComponent->blackHole(Object(UsersController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(UsersController))
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#7 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-06-14 14:56:19 Error: [BadRequestException] The request has been black-holed
+Request URL: /zeanleague_v2/users/register
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Component/SecurityComponent.php(243): SecurityComponent->blackHole(Object(UsersController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(UsersController))
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#7 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-06-14 15:43:16 Error: [MissingActionException] Action MembersController::uploadLogo() could not be found.
+Exception Attributes: array (
+  'controller' => 'MembersController',
+  'action' => 'uploadLogo',
+)
+Request URL: /zeanleague_v2/members/uploadLogo
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MembersController), Object(CakeRequest))
+#2 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-06-14 15:56:25 Error: Fatal Error (1): Call to private method AppController::__setJsonResponse() from context 'MembersController' in [/vagrant/src/zeanleague_v2/app/Controller/MembersController.php, line 58]
+2016-06-14 15:56:25 Error: [FatalErrorException] Call to private method AppController::__setJsonResponse() from context 'MembersController'
+Request URL: /zeanleague_v2/members/uploadLogo
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to private...', '/vagrant/src/ze...', 58)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to private...', '/vagrant/src/ze...', 58, Array)
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to private...', '/vagrant/src/ze...', 58, Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-14 16:06:09 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/avatar_image/9/thumb_550921c0272f3386841ef7d11da65c5d.jpg was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/avatar_image/9/thumb_550921c0272f3386841ef7d11da65c5d.jpg
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'avatar_image', '9', 'thumb_550921c02...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-14 16:32:04 Error: [BadRequestException] The request has been black-holed
+Request URL: /zeanleague_v2/members/profile
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Component/SecurityComponent.php(243): SecurityComponent->blackHole(Object(MembersController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(MembersController))
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#7 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MembersController), Object(CakeRequest))
+#8 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-06-14 16:49:54 Error: [BadRequestException] The request has been black-holed
+Request URL: /zeanleague_v2/members/uploadLogo
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Component/SecurityComponent.php(243): SecurityComponent->blackHole(Object(MembersController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(MembersController))
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#7 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MembersController), Object(CakeRequest))
+#8 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}

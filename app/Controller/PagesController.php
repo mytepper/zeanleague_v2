@@ -37,6 +37,24 @@ class PagesController extends AppController {
  */
 	public $uses = array();
 
+	public function beforefilter(){
+		parent::beforefilter();
+		$this->Auth->allow('index');
+	}
+
+/**
+ * [index]
+ *
+ * @return void
+ */
+	public function index() {
+		$this->loadModel('Carousel');
+		$this->loadModel('TeamsCompetition');
+		$carousels = $this->Carousel->find('all');
+		$teamsCompetitions = $this->TeamsCompetition->getTeamsCompetitionsToday();
+		$this->set(compact('carousels', 'teamsCompetitions'));
+	}
+
 /**
  * Displays a view
  *
@@ -45,11 +63,6 @@ class PagesController extends AppController {
  *	or MissingViewException in debug mode.
  *
  */
-
-	public function index() {
-		
-	}
-
 	public function display() {
 		$path = func_get_args();
 

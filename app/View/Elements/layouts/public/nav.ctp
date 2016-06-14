@@ -1,3 +1,20 @@
+<?php
+	$user = AuthComponent::user();
+	$userLink = array(
+		'linkProfile' => '/users/register',
+		'linkProfileText' => 'สมัครสมาชิก',
+		'linkLogout' => '/users/login',
+		'linkLogoutText' => 'เข้าสู่ระบบ'
+	);
+	if ($user) {
+		$userLink = array(
+			'linkProfile' => '/members/profile',
+			'linkProfileText' => 'ข้อมูลส่วนตัว',
+			'linkLogout' => '/users/logout',
+			'linkLogoutText' => 'ลงชื่อออกจากระบบ'
+		);
+	}
+?>
 <!-- Static navbar -->
    <nav class="navbar navbar-default navbar-static-top">
 	 <div class="container">
@@ -19,7 +36,10 @@
 			   <?php echo $this->Html->link(__d('menu', 'บอลวันนี้'), '/teams_competitions/today');?>
 			</li>
 			<li>
-			   <?php echo $this->Html->link(__d('menu', 'สมัครสมาชิก'), '/users/register');?>
+			   <?php echo $this->Html->link($userLink['linkProfileText'], $userLink['linkProfile']);?>
+			</li>
+			<li>
+			   <?php echo $this->Html->link($userLink['linkLogoutText'], $userLink['linkLogout']);?>
 			</li>
 			<li>
 			   <?php echo $this->Html->link(__d('menu', 'กิจกรรมข่าวสาร'), '/events');?>

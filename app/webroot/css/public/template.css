@@ -5,4 +5,66 @@
          url('../fonts/ThaiSansNeue-Regular.ttf') format('woff'),
          url('../fonts/ThaiSansNeue-Regular.ttf') format('truetype');
 }
-body{background-color: #333;font-family: 'ThaiSansNeue';}
+body{
+	background-color: #fff;
+	font-family: 'ThaiSansNeue';
+	font-size: 24px;
+	color:#333;
+}
+.container{
+	max-width: 1100px;
+}
+.container.content-wrapper{
+	min-height: 500px;
+	margin-top: 50px;
+}
+nav.navbar{
+	background-color: #333;
+	margin-bottom: 0px;
+}
+ul.nav li a{
+	color: #fff!important;
+	font-size: 20px;
+}
+footer{
+	background-color: #333;
+	color: #fff;
+}
+
+/*************/
+input, select, textarea{
+	border-radius: 0px!important;
+	font-size: 24px!important;
+	min-height: 34px!important;
+}
+button.btn-lg{
+	font-size: 24px!important;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+/******/
+.error-message {
+	color:#a94442;
+}
+.message.error {
+	color:#a94442;
+}
+div.error input, div.error textarea, div.error select{
+	border:solid 1px #a94442;
+}
