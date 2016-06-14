@@ -5,7 +5,7 @@ App::uses('AppController', 'Controller');
  */
 class UsersController extends AppController {
 
-	public $components = array('RequestHandler', 'Flash', 'Paginator', 'Auth');
+	public $components = array('RequestHandler', 'Paginator');
 
 /**
  * [beforeFilter]
@@ -45,6 +45,19 @@ class UsersController extends AppController {
  * @return void
  */
 	public function login() {
+		if ($this->Auth->user()) {
+			$user = $this->Auth->user();
+			$this->redirect($user['login_redirect']);
+		}
+
+		if ($this->request->is('post')) {
+			if ($this->Auth->login()) {
+				$user = $this->Auth->user();
+				$this->redirect($user['login_redirect']);
+			} else {
+				$this->Flash->error('Invalid username or password!', array('key' => 'login_errors'));
+			}
+		}
 	}
 
 /**
@@ -53,6 +66,7 @@ class UsersController extends AppController {
  * @return void
  */
 	public function logout() {
+		return $this->redirect($this->Auth->logout());
 	}
 
 /**

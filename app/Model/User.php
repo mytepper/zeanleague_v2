@@ -1,6 +1,7 @@
 <?php
 App::uses('AppModel', 'Model');
 App::uses('CakeEmail', 'Network/Email');
+App::uses('BlowfishPasswordHasher', 'Controller/Component/Auth');
 /**
  * User Model
  *
@@ -77,7 +78,8 @@ class User extends AppModel {
  */
 	public function beforeSave($options = array()) {
 		if (isset($this->data[$this->alias]['password'])) {
-			$this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password']);
+			$passwordHasher = new BlowfishPasswordHasher();
+			$this->data[$this->alias]['password'] = $passwordHasher->hash($this->data[$this->alias]['password']);
 		}
 		return true;
 	}
@@ -90,6 +92,7 @@ class User extends AppModel {
  */
 	public function saveRegister($data) {
 		$data['User']['token'] = sha1(microtime() . strtotime(date('Y-m-d H:i:s')) . rand(10, 100000000));
+		$data['User']['login_redirect'] = '/members/profile';
 		$savedUser = $this->saveAll($data);
 		$userId = $this->id;
 		if ($savedUser) {

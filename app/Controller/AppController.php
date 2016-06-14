@@ -32,12 +32,31 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
+	public $components = array(
+		'Session',
+		'Security',
+		'Flash',
+		'Auth' => array(
+			'authenticate' => array(
+				'Form' => array(
+					'passwordHasher' => 'Blowfish',
+					'contain' => array(
+						'Member'
+					),
+					'fields' => array('username' => 'email'),
+					'scope' => array('confirm' => 1)
+				)
+			)
+		)
+	);
+
 /**
  * [__setJsonResponse]
- * @method __setJsonResponse
- * @param json response
+ *
+ * @param array $array response
+ * @return json
  */
-	public function __setJsonResponse($array) {
+	private function __setJsonResponse($array) {
 		$this->set('json', $array);
 		$this->set('_serialize', array('json'));
 	}

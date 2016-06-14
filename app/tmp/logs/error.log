@@ -271,3 +271,89 @@ Stack Trace:
 #3 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #4 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2016-06-14 15:34:01 Error: Fatal Error (4): syntax error, unexpected ')' in [/vagrant/www/me/zeanleague/app/Controller/AppController.php, line 46]
+2016-06-14 15:34:01 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /me/zeanleague/users/login
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/www/me...', 46)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/www/me...', 46, Array)
+#2 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/www/me...', 46, Array)
+#3 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-14 15:42:32 Error: Fatal Error (64): Cannot redeclare UsersController::$components in [/vagrant/www/me/zeanleague/app/Controller/UsersController.php, line 25]
+2016-06-14 15:42:32 Error: [FatalErrorException] Cannot redeclare UsersController::$components
+Request URL: /me/zeanleague/users/login
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/vagrant/www/me...', 25)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/vagrant/www/me...', 25, Array)
+#2 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/vagrant/www/me...', 25, Array)
+#3 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-14 15:53:29 Error: Fatal Error (64): Cannot redeclare AppController::$components in [/vagrant/www/me/zeanleague/app/Controller/AppController.php, line 69]
+2016-06-14 15:53:29 Error: [FatalErrorException] Cannot redeclare AppController::$components
+Request URL: /me/zeanleague/users/login
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/vagrant/www/me...', 69)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/vagrant/www/me...', 69, Array)
+#2 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/vagrant/www/me...', 69, Array)
+#3 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-14 15:54:02 Error: [BadRequestException] The request has been black-holed
+Request URL: /me/zeanleague/users/login
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Controller/Component/SecurityComponent.php(240): SecurityComponent->blackHole(Object(UsersController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(UsersController))
+#2 /vagrant/www/me/zeanleague/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /vagrant/www/me/zeanleague/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 /vagrant/www/me/zeanleague/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#7 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-06-14 16:21:02 Error: [BadRequestException] The request has been black-holed
+Request URL: /me/zeanleague/users/login
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Controller/Component/SecurityComponent.php(243): SecurityComponent->blackHole(Object(UsersController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(UsersController))
+#2 /vagrant/www/me/zeanleague/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /vagrant/www/me/zeanleague/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 /vagrant/www/me/zeanleague/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#7 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-06-14 16:35:34 Error: Fatal Error (4): syntax error, unexpected '{' in [/vagrant/www/me/zeanleague/app/Controller/UsersController.php, line 49]
+2016-06-14 16:35:34 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /me/zeanleague/users/login
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/www/me...', 49)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/www/me...', 49, Array)
+#2 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/www/me...', 49, Array)
+#3 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-14 16:35:37 Error: Fatal Error (4): syntax error, unexpected '{' in [/vagrant/www/me/zeanleague/app/Controller/UsersController.php, line 49]
+2016-06-14 16:35:37 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /me/zeanleague/users/login
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/www/me...', 49)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/www/me...', 49, Array)
+#2 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/www/me...', 49, Array)
+#3 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-14 16:35:46 Error: Fatal Error (4): syntax error, unexpected '{' in [/vagrant/www/me/zeanleague/app/Controller/UsersController.php, line 49]
+2016-06-14 16:35:46 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /me/zeanleague/users/login
+Stack Trace:
+#0 /vagrant/www/me/zeanleague/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/vagrant/www/me...', 49)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/vagrant/www/me...', 49, Array)
+#2 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/vagrant/www/me...', 49, Array)
+#3 /vagrant/www/me/zeanleague/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
