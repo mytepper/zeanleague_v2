@@ -99,6 +99,15 @@ class TeamsCompetition extends AppModel {
 		return $this->save($data);
 	}
 
+	public function getTeamsCompetitionData($teamsCompetitionId) {
+		return $this->find('first', array(
+			'fields' => $this->fields,
+			'conditions' => array(
+				'TeamsCompetition.id' => $teamsCompetitionId
+			)
+		));
+	}
+
 /**
  * [getTeamsCompetitionsToday]
  *

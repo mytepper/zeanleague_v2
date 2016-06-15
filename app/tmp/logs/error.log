@@ -978,3 +978,733 @@ Stack Trace:
 #4 /vagrant/www/me/zeanleague/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
 #5 /vagrant/www/me/zeanleague/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #6 {main}
+2016-06-15 14:18:35 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /zeanleague_v2/users/login
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/Model/Model.php(3653): Model->setSource('users')
+#1 /vagrant/src/zeanleague_v2/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /vagrant/src/zeanleague_v2/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#3 /vagrant/src/zeanleague_v2/lib/Cake/View/Helper/FormHelper.php(480): FormHelper->_introspectModel('User', 'fields')
+#4 /vagrant/src/zeanleague_v2/app/View/Elements/users/form_login.ctp(13): FormHelper->create('User', Array)
+#5 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(971): include('/vagrant/src/ze...')
+#6 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(933): View->_evaluate('/vagrant/src/ze...', Array)
+#7 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(1224): View->_render('/vagrant/src/ze...', Array)
+#8 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(418): View->_renderElement('/vagrant/src/ze...', Array, Array)
+#9 /vagrant/src/zeanleague_v2/app/View/Users/login.ctp(5): View->element('users/form_logi...')
+#10 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(971): include('/vagrant/src/ze...')
+#11 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(933): View->_evaluate('/vagrant/src/ze...', Array)
+#12 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(473): View->_render('/vagrant/src/ze...')
+#13 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#14 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#15 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#16 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2016-06-15 14:18:46 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /zeanleague_v2/users/login
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/Model/Model.php(3653): Model->setSource('users')
+#1 /vagrant/src/zeanleague_v2/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /vagrant/src/zeanleague_v2/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#3 /vagrant/src/zeanleague_v2/lib/Cake/View/Helper/FormHelper.php(480): FormHelper->_introspectModel('User', 'fields')
+#4 /vagrant/src/zeanleague_v2/app/View/Elements/users/form_login.ctp(13): FormHelper->create('User', Array)
+#5 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(971): include('/vagrant/src/ze...')
+#6 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(933): View->_evaluate('/vagrant/src/ze...', Array)
+#7 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(1224): View->_render('/vagrant/src/ze...', Array)
+#8 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(418): View->_renderElement('/vagrant/src/ze...', Array, Array)
+#9 /vagrant/src/zeanleague_v2/app/View/Users/login.ctp(5): View->element('users/form_logi...')
+#10 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(971): include('/vagrant/src/ze...')
+#11 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(933): View->_evaluate('/vagrant/src/ze...', Array)
+#12 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(473): View->_render('/vagrant/src/ze...')
+#13 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#14 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#15 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#16 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2016-06-15 14:18:52 Error: [MissingTableException] Table carousels for model Carousel was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'carousels',
+  'class' => 'Carousel',
+  'ds' => 'default',
+)
+Request URL: /zeanleague_v2/
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/Model/Model.php(3653): Model->setSource('carousels')
+#1 /vagrant/src/zeanleague_v2/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /vagrant/src/zeanleague_v2/app/Controller/PagesController.php(58): Model->find('all')
+#4 [internal function]: PagesController->index()
+#5 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#6 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#8 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-06-15 14:20:05 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 14:20:09 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 14:20:16 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 14:20:40 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 14:22:40 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 14:23:29 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 14:24:38 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 14:25:46 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 14:26:01 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 14:47:43 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Predict.teams_compettition_id' in 'on clause'
+Request URL: /zeanleague_v2/predicts/getForm/5
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/src/zeanleague_v2/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Model/Datasource/DboSource.php(664): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Model/Datasource/DboSource.php(1113): DboSource->fetchAll('SELECT COUNT(*)...', false)
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Predict), Array)
+#5 /vagrant/src/zeanleague_v2/lib/Cake/Model/Model.php(3003): Model->_readDataSource('count', Array)
+#6 /vagrant/src/zeanleague_v2/app/Model/Predict.php(78): Model->find('count', Array)
+#7 /vagrant/src/zeanleague_v2/app/Controller/PredictsController.php(29): Predict->getPredictDataSubmit('5', Array)
+#8 [internal function]: PredictsController->getForm('5')
+#9 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PredictsController), Array)
+#10 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PredictsController), Object(CakeRequest))
+#12 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2016-06-15 14:48:46 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 14:50:26 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 21:51:00 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 21:52:00 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 21:52:28 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:01:33 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:01:41 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:12:10 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fields' in 'where clause'
+Request URL: /zeanleague_v2/predicts/getForm/5
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /vagrant/src/zeanleague_v2/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `TeamsCo...', Array)
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Model/Datasource/DboSource.php(664): DboSource->execute('SELECT `TeamsCo...', Array, Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Model/Datasource/DboSource.php(1113): DboSource->fetchAll('SELECT `TeamsCo...', false)
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Model/Model.php(3031): DboSource->read(Object(TeamsCompetition), Array)
+#5 /vagrant/src/zeanleague_v2/lib/Cake/Model/Model.php(3003): Model->_readDataSource('first', Array)
+#6 /vagrant/src/zeanleague_v2/app/Model/TeamsCompetition.php(108): Model->find('first', Array)
+#7 /vagrant/src/zeanleague_v2/app/Model/Predict.php(68): TeamsCompetition->getTeamsCompetitionData('5')
+#8 /vagrant/src/zeanleague_v2/app/Controller/PredictsController.php(29): Predict->getPredictDataSubmit('5', Array)
+#9 [internal function]: PredictsController->getForm('5')
+#10 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PredictsController), Array)
+#11 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PredictsController), Object(CakeRequest))
+#13 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-06-15 22:25:36 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:26:25 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:35:29 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:36:09 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:37:34 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:37:45 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:38:07 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:38:29 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:43:17 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:43:44 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:44:22 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:45:09 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:46:45 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:47:13 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:48:06 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:49:12 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:50:31 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:52:02 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:52:06 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:53:25 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:56:21 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:56:27 Error: [MissingViewException] View file "Predicts/get_form.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Predicts/get_form.ctp',
+)
+Request URL: /zeanleague_v2/predicts/getForm/5
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PredictsController), Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-06-15 22:56:31 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:56:34 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:56:41 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:56:46 Error: [MissingViewException] View file "Predicts/get_form.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Predicts/get_form.ctp',
+)
+Request URL: /zeanleague_v2/predicts/getForm/5
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PredictsController), Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-06-15 22:56:49 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:56:53 Error: [MissingViewException] View file "Predicts/get_form.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Predicts/get_form.ctp',
+)
+Request URL: /zeanleague_v2/predicts/getForm/5
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PredictsController), Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-06-15 22:56:56 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:57:41 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:57:47 Error: [MissingViewException] View file "Predicts/get_form.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Predicts/get_form.ctp',
+)
+Request URL: /zeanleague_v2/predicts/getForm/5
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PredictsController), Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-06-15 22:57:52 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:58:07 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:58:12 Error: [MissingViewException] View file "Predicts/get_form.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Predicts/get_form.ctp',
+)
+Request URL: /zeanleague_v2/predicts/getForm/5
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PredictsController), Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-06-15 22:58:15 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:58:29 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:58:35 Error: [MissingViewException] View file "Predicts/get_form.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Predicts/get_form.ctp',
+)
+Request URL: /zeanleague_v2/predicts/getForm/5
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PredictsController), Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-06-15 22:58:37 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 22:59:15 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 23:47:13 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 23:47:31 Error: [MissingActionException] Action PredictsController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'PredictsController',
+  'action' => 'index',
+)
+Request URL: /zeanleague_v2/predicts/index
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PredictsController), Object(CakeRequest))
+#2 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-06-15 23:47:35 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 23:47:41 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-06-15 23:47:48 Error: [MissingViewException] View file "Events/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Events/index.ctp',
+)
+Request URL: /zeanleague_v2/events
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-06-15 23:47:52 Error: [NotFoundException] The requested file /vagrant/src/zeanleague_v2/app/webroot/files/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image was not found or not readable
+Request URL: /zeanleague_v2/images/imageThumb/team/logo_image/4/thumb_f71ef96246632766ec761f2f5b5b37b5.logo_image
+Stack Trace:
+#0 /vagrant/src/zeanleague_v2/app/Controller/ImagesController.php(20): CakeResponse->file('webroot/files/t...')
+#1 [internal function]: ImagesController->imageThumb('team', 'logo_image', '4', 'thumb_f71ef9624...')
+#2 /vagrant/src/zeanleague_v2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /vagrant/src/zeanleague_v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#5 /vagrant/src/zeanleague_v2/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}

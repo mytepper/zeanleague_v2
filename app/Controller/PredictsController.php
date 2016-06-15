@@ -25,8 +25,11 @@ class PredictsController extends AppController {
  */
 	public function getForm($teamsCompetitionId) {
 		if ($this->request->is('ajax')) {
-			$result = array();
+			$user = $this->Auth->user();
+			//$predict = $this->Predict->getPredictData($teamsCompetitionId, $user);
+			$result = $this->Predict->getPredictDataSubmit($teamsCompetitionId, $user);
 			$this->set(compact('result'));
+			//$this->request->data = $predict;
 			return $this->render('/Elements/teams_competitions/predict_form');
 		}
 	}
