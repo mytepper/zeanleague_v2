@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
 --
--- Host: localhost    Database: zeanleague_db
+-- Host: 127.0.0.1    Database: zeanleague
 -- ------------------------------------------------------
--- Server version	5.5.47-0ubuntu0.14.04.1
+-- Server version	5.5.47-0ubuntu0.12.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -83,8 +83,8 @@ DROP TABLE IF EXISTS `events`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `events` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) COLLATE ucs2_unicode_ci DEFAULT NULL,
-  `description` text COLLATE ucs2_unicode_ci,
+  `name` varchar(45) CHARACTER SET ucs2 NOT NULL,
+  `description` text CHARACTER SET ucs2 NOT NULL,
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -134,10 +134,11 @@ DROP TABLE IF EXISTS `groups`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `groups` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `name` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `limit_predict` int(11) NOT NULL DEFAULT '1',
+  `price` int(11) NOT NULL,
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
-  `limit_predict` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -168,6 +169,7 @@ CREATE TABLE `members` (
   `phone` int(10) unsigned zerofill DEFAULT NULL,
   `email` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `line` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `group_id` int(11) DEFAULT '0',
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -180,7 +182,7 @@ CREATE TABLE `members` (
 
 LOCK TABLES `members` WRITE;
 /*!40000 ALTER TABLE `members` DISABLE KEYS */;
-INSERT INTO `members` VALUES (8,NULL,NULL,'junior member',NULL,NULL,NULL,NULL,NULL,'2016-06-14 16:18:06','2016-06-14 16:18:06'),(9,'tep','tep','junior member',9,'cd449803179c4b1b6da2ebaebba81cec.jpg',0931624206,'burapa.s@aware.co.th','','2016-06-14 16:52:24','2016-06-14 16:58:12');
+INSERT INTO `members` VALUES (8,NULL,NULL,'junior member',NULL,NULL,NULL,NULL,NULL,NULL,'2016-06-14 16:18:06','2016-06-14 16:18:06'),(9,'tep','tep','junior member',9,'cd449803179c4b1b6da2ebaebba81cec.jpg',0931624206,'burapa.s@aware.co.th','',NULL,'2016-06-14 16:52:24','2016-06-15 16:43:06');
 /*!40000 ALTER TABLE `members` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -195,7 +197,9 @@ CREATE TABLE `predicts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `member_id` int(11) NOT NULL,
   `teams_compettition_id` int(11) NOT NULL,
-  `team` enum('A','B') COLLATE utf8_unicode_ci DEFAULT NULL,
+  `team` enum('A','B') CHARACTER SET utf8 NOT NULL,
+  `team_a_score` int(11) NOT NULL,
+  `team_b_score` int(11) NOT NULL,
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -317,7 +321,7 @@ CREATE TABLE `teams_competitions` (
   `modified` datetime DEFAULT NULL,
   `date_time` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -326,7 +330,7 @@ CREATE TABLE `teams_competitions` (
 
 LOCK TABLES `teams_competitions` WRITE;
 /*!40000 ALTER TABLE `teams_competitions` DISABLE KEYS */;
-INSERT INTO `teams_competitions` VALUES (1,2,4,0,0,2,5,5,'A','2016-06-01 13:15:41','2016-06-01 15:03:32','2036-01-01 00:00:00'),(2,7,2,0,0,1,5,2,'A','2016-06-01 14:22:36','2016-06-08 14:52:19','2016-06-01 14:22:00');
+INSERT INTO `teams_competitions` VALUES (1,2,4,0,0,2,5,5,'A','2016-06-01 13:15:41','2016-06-01 15:03:32','2016-06-01 00:00:00'),(2,7,2,0,0,1,5,2,'A','2016-06-01 14:22:36','2016-06-08 14:52:19','2016-05-01 14:22:00'),(3,7,2,0,0,1,5,2,'A','2016-06-01 14:22:36','2016-06-08 14:52:19','2016-06-01 14:22:00'),(4,2,4,0,0,2,5,5,'A','2016-06-01 13:15:41','2016-06-01 15:03:32','2016-06-15 12:00:00'),(5,7,2,0,0,1,5,2,'A','2016-06-01 14:22:36','2016-06-08 14:52:19','2016-06-15 19:00:00'),(6,7,2,0,0,1,5,2,'A','2016-06-01 14:22:36','2016-06-08 14:52:19','2016-06-15 19:30:00');
 /*!40000 ALTER TABLE `teams_competitions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -371,4 +375,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-06-15  0:02:43
+-- Dump completed on 2016-06-15 18:00:11
