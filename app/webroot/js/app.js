@@ -4,7 +4,7 @@ requirejs.config({
       "app": "../app"
     },
     "shim": {
-        "bootstrap": ["jquery"],
+        "bootstrap_public": ["jquery"],
     }
 });
 requirejs(["app/main"]);

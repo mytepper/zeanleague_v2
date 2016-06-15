@@ -1,10 +1,10 @@
 <?php
-App::uses('Member', 'Model');
+App::uses('Predict', 'Model');
 
 /**
- * Member Test Case
+ * Predict Test Case
  */
-class MemberTest extends CakeTestCase {
+class PredictTest extends CakeTestCase {
 
 /**
  * Fixtures
@@ -12,10 +12,11 @@ class MemberTest extends CakeTestCase {
  * @var array
  */
 	public $fixtures = array(
+		'app.predict',
 		'app.member',
 		'app.group',
-		'app.predict',
-		'app.user'
+		'app.user',
+		'app.teams_compettition'
 	);
 
 /**
@@ -25,7 +26,7 @@ class MemberTest extends CakeTestCase {
  */
 	public function setUp() {
 		parent::setUp();
-		$this->Member = ClassRegistry::init('Member');
+		$this->Predict = ClassRegistry::init('Predict');
 	}
 
 /**
@@ -34,7 +35,7 @@ class MemberTest extends CakeTestCase {
  * @return void
  */
 	public function tearDown() {
-		unset($this->Member);
+		unset($this->Predict);
 
 		parent::tearDown();
 	}

@@ -23,7 +23,6 @@
 	?>
 </head>
 <body>
-
 		<?php echo $this->element('layouts/public/nav');?>
 		<?php echo $this->fetch('carousel');?>
 		<?php echo $this->fetch('tab_bottom_carousel');?>

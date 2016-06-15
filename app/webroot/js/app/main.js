@@ -1,11 +1,4 @@
-define(["jquery"], function($) {
-	var module = function(){
-		simple();
-	}
-
-	var simple = function() {
-
-	}
-	return module();
-
+define(function (require) {
+    var $ = require('jquery'),
+		bootstrap = require('../bootstrap_public');
 });

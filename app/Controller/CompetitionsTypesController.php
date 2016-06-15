@@ -5,11 +5,11 @@ App::uses('AppController', 'Controller');
  */
 class CompetitionsTypesController extends AppController {
 
-	public $components = array('RequestHandler', 'Flash', 'Paginator');
+	public $components = array('RequestHandler', 'Paginator');
 
 /**
  * [index temes list]
- * @method index
+ *
  * @return void
  */
 	public function index() {
@@ -30,7 +30,6 @@ class CompetitionsTypesController extends AppController {
 
 /**
  * [add]
- * @method add
  *
  * @return void
  */
@@ -49,7 +48,6 @@ class CompetitionsTypesController extends AppController {
 /**
  * [edit]
  *
- * @method edit
  * @param int $id team id
  * @return void
  */
@@ -71,10 +69,9 @@ class CompetitionsTypesController extends AppController {
 		$this->set(compact('logo'));
 	}
 
-
 /**
  * [uploadLogo description]
- * @method uploadLogo
+ *
  * @return json
  */
 	public function uploadLogo() {

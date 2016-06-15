@@ -3,9 +3,43 @@ App::uses('AppModel', 'Model');
 /**
  * Member Model
  *
+ * @property Group $Group
+ * @property Predict $Predict
  * @property User $User
  */
 class Member extends AppModel {
+
+	// The Associations below have been created with all possible keys, those that are not needed can be removed
+
+/**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = array(
+		'Group' => array(
+			'className' => 'Group',
+			'foreignKey' => 'group_id',
+		)
+	);
+
+/**
+ * hasMany associations
+ *
+ * @var array
+ */
+	public $hasMany = array(
+		'Predict' => array(
+			'className' => 'Predict',
+			'foreignKey' => 'member_id',
+			'dependent' => false,
+		),
+		'User' => array(
+			'className' => 'User',
+			'foreignKey' => 'member_id',
+			'dependent' => false,
+		)
+	);
 
 /**
  * Validation rules
@@ -49,38 +83,23 @@ class Member extends AppModel {
 		),
 	);
 
-	// The Associations below have been created with all possible keys, those that are not needed can be removed
-
-/**
- * hasMany associations
- *
- * @var array
- */
-	public $hasMany = array(
-		'User' => array(
-			'className' => 'User',
-			'foreignKey' => 'member_id',
-			'dependent' => false,
-		)
-	);
-
 /**
  * [$actsAs configtion]
  * @var array
  */
 	public $actsAs = array(
 		'Upload.Upload' => array(
-		   'avatar_image' => array(
+			'avatar_image' => array(
 			   'fields' => array(
 				   'dir' => 'avatar_dir'
 			   ),
 			   'thumbnailSizes' => array(
-                    'thumb' => '200x200'
-                ),
+			        'thumb' => '200x200'
+			    ),
 				'deleteOnUpdate' => true,
 				'maxSize' => 1000000,
 				'nameCallback' => '__renameFile'
-		   )
+			)
 		)
 	);
 

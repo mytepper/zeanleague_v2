@@ -5,11 +5,52 @@ App::uses('AppController', 'Controller');
  */
 class TeamsCompetitionsController extends AppController {
 
-	public $components = array('RequestHandler', 'Flash', 'Paginator');
+	public $components = array('RequestHandler', 'Paginator');
+
+/**
+ * [beforeFilter]
+ *
+ * @return void
+ */
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->Auth->allow('passed', 'coming', 'today');
+	}
+
+/**
+ * [predicts]
+ *
+ * @return void
+ */
+	public function predicts() {
+		$teamsCompetitions = $this->TeamsCompetition->getTeamsCompetitionsToday();
+		$this->set(compact('teamsCompetitions'));
+	}
+/**
+ * [passed]
+ *
+ * @return void
+ */
+	public function passed() {
+		$conditions = array(
+			'TeamsCompetition.date_time <' => date('Y-m-d H:i:s')
+		);
+		$this->paginate = array(
+			'fields' => $this->TeamsCompetition->fields,
+			'limit' => 2,
+			'conditions' => $conditions,
+			'order' => array(
+				'TeamsCompetition.date_time' => 'desc',
+				'CompetitionsType.name' => 'asc'
+			)
+		);
+		$teamsCompetitions = $this->paginate('TeamsCompetition');
+		$this->set(compact('teamsCompetitions'));
+	}
 
 /**
  * [index temes list]
- * @method index
+ *
  * @return void
  */
 	public function index() {
@@ -47,7 +88,6 @@ class TeamsCompetitionsController extends AppController {
 
 /**
  * [add]
- * @method add
  *
  * @return void
  */
@@ -75,7 +115,6 @@ class TeamsCompetitionsController extends AppController {
 /**
  * [edit]
  *
- * @method edit
  * @param int $id team id
  * @return void
  */

@@ -17,6 +17,6 @@ requirejs(["app/index"]);
 
 <div class="row">
 	<div class="col-xs-12 col-md-12 col-sm-12">
-		<?php echo $this->element('teams_competitions/lists_table');?>
+		<?php echo $this->element('teams_competitions/lists_today_table');?>
 	</div>
 </div>

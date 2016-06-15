@@ -76,7 +76,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => 'root',
-		'database' => 'zeanleague_db',
+		'database' => 'zeanleague',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);

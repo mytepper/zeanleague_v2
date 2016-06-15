@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-xs-4 col-lg-4 col-sm-4">
+	<div class="col-md-4 col-lg-4 col-sm-4">
 		<br>
 		<?php
 		echo $this->Form->create('Member', array(
@@ -57,7 +57,7 @@
 		</div>
 		<?php echo $this->Form->end();?>
 	</div>
-	<div class="col-xs-8 col-lg-8 col-sm-8">
+	<div class="col-md-8 col-lg-8 col-sm-8">
 		<?php echo $this->Flash->render('members');?>
 		<?php
 			echo $this->Form->create('Member', array(

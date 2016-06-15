@@ -28,6 +28,7 @@ class MembersController extends AppController {
 		if (empty($user) || $user['role'] != 1) {
 			throw new NotFoundException();
 		}
+		$this->Member->recursive = 0;
 		$user = $this->Member->findById($user['Member']['id']);
 		if ($this->request->is('put')) {
 			$saved = $this->Member->save($this->request->data);
@@ -45,7 +46,7 @@ class MembersController extends AppController {
 
 /**
  * [uploadLogo description]
- * @method uploadLogo
+ *
  * @return [type]     [description]
  */
 	public function uploadLogo() {

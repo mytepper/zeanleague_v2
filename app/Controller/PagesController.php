@@ -37,7 +37,12 @@ class PagesController extends AppController {
  */
 	public $uses = array();
 
-	public function beforefilter(){
+/**
+ * [beforefilter]
+ *
+ * @return void
+ */
+	public function beforefilter() {
 		parent::beforefilter();
 		$this->Auth->allow('index');
 	}

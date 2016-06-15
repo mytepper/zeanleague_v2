@@ -17,6 +17,7 @@ body{
 .container.content-wrapper{
 	min-height: 500px;
 	margin-top: 50px;
+	font-size: 18px;
 }
 nav.navbar{
 	background-color: #333;
@@ -34,11 +35,18 @@ footer{
 /*************/
 input, select, textarea{
 	border-radius: 0px!important;
-	font-size: 24px!important;
+	font-size: 18px!important;
 	min-height: 34px!important;
+}
+button.btn{
+	font-size: 18px!important;
 }
 button.btn-lg{
 	font-size: 24px!important;
+}
+.form-group .input label{
+	color: #787878;
+	font-size: 18px;
 }
 
 .fileUpload {
@@ -61,6 +69,7 @@ button.btn-lg{
 /******/
 .error-message {
 	color:#a94442;
+	font-size: 18px;
 }
 .message.error {
 	color:#a94442;
