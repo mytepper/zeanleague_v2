@@ -12,7 +12,6 @@
 	</div>
 	<div class="row">
 		<div class="col-md-12 col-lg-12 col-sm-12">
-			<?php echo $this->Flash->render('predicts');?>
 			<div class="row">
 				<?php
 					echo $this->Form->create('Predict', array(
@@ -59,12 +58,21 @@
 					</div>
 				</div>
 				<div class="col-md-12 col-lg-12 col-sm-12">
+					<?php echo $this->Flash->render('predicts');?>
 					<div class="form-group">
 						<?php
+						if (isset($this->request->data['Predict']['id'])) :
+							echo $this->Form->input('id');
+							echo $this->Form->button('อัพเดทการทายผล', array(
+								'type' => 'submit',
+								'class' => 'btn btn-success btn-submit-predict'
+							));
+						else:
 							echo $this->Form->button('ยืนยันการทายผล', array(
 								'type' => 'submit',
-								'class' => 'btn btn-primary btn-submit'
+								'class' => 'btn btn-primary btn-submit-predict'
 							));
+						endif;
 							echo $this->Form->end();
 						?>
 					</div>

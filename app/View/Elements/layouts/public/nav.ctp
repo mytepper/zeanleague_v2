@@ -33,7 +33,7 @@
 				<?php echo $this->Html->link(__d('menu', 'หน้าหลัก'), '/');?>
 			</li>
 			<li>
-			   <?php echo $this->Html->link(__d('menu', 'บอลวันนี้'), '/teams_competitions/today');?>
+			   <?php echo $this->Html->link(__d('menu', 'บอลวันนี้'), '/teams_competitions/predicts');?>
 			</li>
 			<li>
 			   <?php echo $this->Html->link($userLink['linkProfileText'], $userLink['linkProfile']);?>
