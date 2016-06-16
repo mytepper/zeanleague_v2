@@ -59,7 +59,7 @@
 				<?php echo h($predict[0]['team_b']);?>
 			</td>
 			<td>
-
+				<?php echo $predict['Predict']['team_a_score'];?> - <?php echo $predict['Predict']['team_b_score'];?>
 			</td>
 			<td>
 				<?php echo ($predict['TeamsCompetition']['team'] == 'A') ? $predict[0]['team_a'] : $predict[0]['team_b'];?>

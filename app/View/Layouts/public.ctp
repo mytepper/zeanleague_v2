@@ -30,7 +30,8 @@
 
 		<!-- Content Wrapper. Contains page content -->
 		<div class="container content-wrapper">
-			<?php //echo $this->Flash->render(); ?>
+			<?php echo $this->fetch('member_tab');?>
+			<?php echo $this->Flash->render(); ?>
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<footer>

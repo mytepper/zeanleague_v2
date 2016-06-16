@@ -2,7 +2,7 @@
 	<div class="col-sm-4 col-lg-4 col-md-4">
 		<div class="row">
 			<div class="col-sm-12 col-lg-12 col-md-12">
-				<h4>การทายผลในวันนี้</h4>
+				<h2>การทายผลในวันนี้</h2>
 			</div>
 		</div>
 		<hr>
@@ -13,7 +13,7 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-12 col-lg-12 col-md-12">
-				<?php echo $this->Html->link('ดูทั้งหมดของฉัน >>', '/predicts/index', array(
+				<?php echo $this->Html->link('ดูทั้งหมดของฉัน >>', '/predicts/member', array(
 					'class' => 'btn btn-default'
 				));?>
 			</div>
@@ -21,8 +21,8 @@
 	</div>
 	<div class="col-sm-8 col-lg-8 col-md-8">
 		<div class="row">
-			<div class="col-sm-12 col-lg-12 col-md-12">
-
+			<div class="col-sm-12 col-lg-12 col-md-12 text-center">
+				<h2>ประจำวันที่ : <?php echo date('d/m/Y');?></h2>
 			</div>
 		</div>
 		<hr>

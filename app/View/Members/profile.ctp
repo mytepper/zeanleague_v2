@@ -2,7 +2,11 @@
 	$this->layout = 'public';
 	$this->set('title', 'index');
 	$this->Html->scriptStart(array('inline' => true));
-	echo $this->element('members/member_menu');
+
+	$this->start('member_tab');
+		echo $this->element('layouts/public/member_tab');
+	$this->end();
+
 	echo $this->element('members/form_profile');
 	$this->Html->scriptStart(array('inline' => true));
 ?>

@@ -18,6 +18,55 @@ class PredictsController extends AppController {
 	}
 
 /**
+ * [index]
+ *
+ * @return void
+ */
+	public function member() {
+		$user = $this->Auth->user();
+		$conditions = array();
+		if (isset($this->request->query['key'])) {
+			$conditions = array(
+				'TeamsCompetition.name LIKE' => '%' . $this->request->query['key'] . '%'
+			);
+		}
+		$this->paginate = array(
+			'fields' => array(
+				'Predict.id',
+				'Predict.member_id',
+				'Predict.teams_competition_id',
+				'Predict.team',
+				'Predict.team_a_score',
+				'Predict.team_b_score',
+				'Predict.modified',
+				'TeamsCompetition.id',
+				'TeamsCompetition.team_a_id',
+				'TeamsCompetition.team_b_id',
+				'TeamsCompetition.team_a_score',
+				'TeamsCompetition.team_b_score',
+				'TeamsCompetition.competitions_type_id',
+				'TeamsCompetition.max_score',
+				'TeamsCompetition.rate_id',
+				'TeamsCompetition.team',
+				'TeamsCompetition.date_time',
+				"(SELECT CONCAT(name, '') FROM competitions_types WHERE competitions_types.id = TeamsCompetition.competitions_type_id) competitionsType",
+				"(SELECT CONCAT(name, '') FROM rates WHERE rates.id = TeamsCompetition.rate_id) rate",
+				"(SELECT CONCAT(name, '') FROM teams WHERE teams.id = TeamsCompetition.team_a_id) team_a",
+				"(SELECT CONCAT(logo_image, '') FROM teams WHERE teams.id = TeamsCompetition.team_a_id) team_a_logo",
+				"(SELECT CONCAT(name, '') FROM teams WHERE teams.id = TeamsCompetition.team_b_id) team_b",
+				"(SELECT CONCAT(logo_image, '') FROM teams WHERE teams.id = TeamsCompetition.team_b_id) team_b_logo",
+			),
+			'limit' => 20,
+			'conditions' => array(
+				'Predict.member_id' => $user['member_id']
+			),
+			'order' => array('TeamsCompetition.date_time' => 'DESC')
+		);
+		$predicts = $this->paginate('Predict');
+		$this->set(compact('predicts'));
+	}
+
+/**
  * [getForm]
  *
  * @param int $teamsCompetitionId teamsCompetitionId
