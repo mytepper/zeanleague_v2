@@ -50,23 +50,13 @@ class AppSchema extends CakeSchema {
 		'tableParameters' => array('charset' => 'ucs2', 'collate' => 'ucs2_unicode_ci', 'engine' => 'InnoDB')
 	);
 
-	public $facebooks = array(
-		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false, 'key' => 'primary'),
-		'facebook' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 45, 'collate' => 'utf8_unicode_ci', 'charset' => 'utf8'),
-		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
-		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
-		'indexes' => array(
-			'PRIMARY' => array('column' => 'id', 'unique' => 1)
-		),
-		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_unicode_ci', 'engine' => 'InnoDB')
-	);
-
 	public $groups = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false, 'key' => 'primary'),
-		'name' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 45, 'collate' => 'utf8_unicode_ci', 'charset' => 'utf8'),
+		'name' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 45, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'limit_predict' => array('type' => 'integer', 'null' => false, 'default' => '1', 'unsigned' => false),
+		'price' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
 		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
-		'limit_predict' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
@@ -83,6 +73,7 @@ class AppSchema extends CakeSchema {
 		'phone' => array('type' => 'integer', 'null' => true, 'default' => null, 'length' => 10, 'unsigned' => true),
 		'email' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 50, 'collate' => 'utf8_unicode_ci', 'charset' => 'utf8'),
 		'line' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 20, 'collate' => 'utf8_unicode_ci', 'charset' => 'utf8'),
+		'group_id' => array('type' => 'integer', 'null' => true, 'default' => '0', 'unsigned' => false),
 		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'indexes' => array(
@@ -94,7 +85,9 @@ class AppSchema extends CakeSchema {
 	public $predicts = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false, 'key' => 'primary'),
 		'member_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
-		'teams_compettition_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
+		'teams_competition_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
+		'team_a_score' => array('type' => 'integer', 'null' => true, 'default' => null, 'unsigned' => false),
+		'team_b_score' => array('type' => 'integer', 'null' => true, 'default' => null, 'unsigned' => false),
 		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'indexes' => array(
@@ -147,14 +140,15 @@ class AppSchema extends CakeSchema {
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false, 'key' => 'primary'),
 		'team_a_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
 		'team_b_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
-		'team_a_score' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
-		'team_b_score' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
+		'team_a_score' => array('type' => 'integer', 'null' => true, 'default' => null, 'unsigned' => false),
+		'team_b_score' => array('type' => 'integer', 'null' => true, 'default' => null, 'unsigned' => false),
 		'competitions_type_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
 		'max_score' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
 		'rate_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
+		'date_time' => array('type' => 'datetime', 'null' => false, 'default' => null),
+		'match_end' => array('type' => 'boolean', 'null' => true, 'default' => null),
 		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
-		'date_time' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),

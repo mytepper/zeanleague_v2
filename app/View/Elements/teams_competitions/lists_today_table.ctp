@@ -91,7 +91,7 @@
 							<button type="button" class="btn btn-default disabled"><i class="fa fa-ban"></i></button>
 							<?php else: ?>
 							<?php echo $this->Html->link('<i class="fa fa-futbol-o" aria-hidden="true"></i>', '/teams_competitions/predicts', array(
-								'class' => 'btn btn-success',
+								'class' => 'btn btn-success btn-xs',
 								'escape' => false
 							));?>
 							<?php endif; ?>
