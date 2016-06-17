@@ -18,6 +18,46 @@ class TeamsCompetitionsController extends AppController {
 	}
 
 /**
+ * [process]
+ *
+ * @return void
+ */
+	public function process() {
+		$this->isAdmin();
+		$conditions = array();
+		if (isset($this->request->query['date_time'])) {
+			$conditions = array(
+				'DATE(TeamsCompetition.date_time)' => date('Y-m-d', strtotime($this->request->query['date_time']))
+			);
+		}
+		$this->paginate = array(
+			'fields' => array(
+				'TeamsCompetition.id',
+				'TeamsCompetition.team_a_id',
+				'TeamsCompetition.team_b_id',
+				'TeamsCompetition.team_a_score',
+				'TeamsCompetition.team_b_score',
+				'TeamsCompetition.competitions_type_id',
+				'TeamsCompetition.max_score',
+				'TeamsCompetition.rate_id',
+				'TeamsCompetition.team',
+				'TeamsCompetition.match_end',
+				'CompetitionsType.name',
+				'Rate.name',
+				"(SELECT CONCAT(name, '') FROM teams WHERE teams.id = TeamsCompetition.team_a_id) team_a",
+				"(SELECT CONCAT(logo_image, '') FROM teams WHERE teams.id = TeamsCompetition.team_a_id) team_a_logo",
+				"(SELECT CONCAT(name, '') FROM teams WHERE teams.id = TeamsCompetition.team_b_id) team_b",
+				"(SELECT CONCAT(logo_image, '') FROM teams WHERE teams.id = TeamsCompetition.team_b_id) team_b_logo",
+			),
+			'limit' => 30,
+			'conditions' => $conditions,
+			'order' => array('TeamsCompetition.date_time' => 'desc')
+		);
+		$teamsCompetitions = $this->paginate('TeamsCompetition');
+		$this->set(compact('teamsCompetitions'));
+	}
+
+/**
  * [predicts]
  *
  * @return void
@@ -92,6 +132,7 @@ class TeamsCompetitionsController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->isAdmin();
 		$competitionsTypes = Hash::combine($this->TeamsCompetition->CompetitionsType->find('all'), '{n}.CompetitionsType.id', '{n}.CompetitionsType.name');
 		$this->loadModel('Team');
 		$teams = Hash::combine($this->Team->find('all'), '{n}.Team.id', '{n}.Team.name');
@@ -119,6 +160,7 @@ class TeamsCompetitionsController extends AppController {
  * @return void
  */
 	public function edit($id) {
+		$this->isAdmin();
 		$teamsCompetition = $this->TeamsCompetition->findById($id);
 		$competitionsTypes = Hash::combine($this->TeamsCompetition->CompetitionsType->find('all'), '{n}.CompetitionsType.id', '{n}.CompetitionsType.name');
 		$this->loadModel('Team');

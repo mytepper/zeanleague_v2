@@ -60,4 +60,17 @@ class AppController extends Controller {
 		$this->set('json', $array);
 		$this->set('_serialize', array('json'));
 	}
+
+/**
+ * [isAdmin]
+ *
+ * @return void
+ * @throws NotFoundException
+ */
+	public function isAdmin() {
+		$user = $this->Auth->user();
+		if ($user['role'] == 1) {
+			throw new NotFoundException();
+		}
+	}
 }

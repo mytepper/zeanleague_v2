@@ -42,7 +42,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 	?>
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini admin">
 	<div class="wrapper">
 
 		<?php echo $this->element('layouts/header');?>

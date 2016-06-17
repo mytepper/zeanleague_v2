@@ -17,13 +17,13 @@
 		),
 		array(
 			'name' => 'การทายผลทั้งหมดของสมาชิก',
-			'link' => '/members/profile',
-			'active' => ($this->params['action'] == '') ? true : false
+			'link' => '/predicts/all',
+			'active' => ($this->params['action'] == 'all') ? true : false
 		),
 		array(
 			'name' => 'แลกของรางวัล',
-			'link' => '/members/profile',
-			'active' => ($this->params['action'] == '') ? true : false
+			'link' => '/awards/lists',
+			'active' => ($this->params['action'] == 'lists' || $this->params['action'] == 'exchange') ? true : false
 		)
 	);
 ?>

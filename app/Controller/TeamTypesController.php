@@ -9,7 +9,6 @@ class TeamTypesController extends AppController {
 
 /**
  * [index view data table]
- * @method index
  *
  * @return void
  */
@@ -21,17 +20,16 @@ class TeamTypesController extends AppController {
 			);
 		}
 		$this->paginate = array(
-	        'limit' => 20,
+			'limit' => 20,
 			'conditions' => $conditions,
-	        'order' => array('id' => 'desc')
-	    );
+			'order' => array('id' => 'desc')
+		);
 		$teamTypes = $this->paginate('TeamType');
-    	$this->set(compact('teamTypes'));
+		$this->set(compact('teamTypes'));
 	}
 
 /**
  * [add]
- * @method add
  *
  * @return void
  */
@@ -50,7 +48,6 @@ class TeamTypesController extends AppController {
 /**
  * [edit]
  *
- * @method edit
  * @param int $id teamTypes id
  * @return void
  */
@@ -66,6 +63,29 @@ class TeamTypesController extends AppController {
 			}
 		} else {
 			$this->request->data = $teamType;
+		}
+	}
+
+/**
+ * [delete]
+ *
+ * @param int $pkId pk id
+ * @return void
+ */
+	public function delete($pkId) {
+		$this->isAdmin();
+		if ($this->request->is('ajax')) {
+			$status = false;
+			$message = 'ไม่สามารถลบข้อมูลได้';
+			$deleted = $this->TeamType->delete($pkId);
+			if ($deleted) {
+				$status = true;
+				$message = 'ลบข้อมูลแล้ว';
+			}
+			$this->setJsonResponse(array(
+				'status' => $status,
+				'message' => $message
+			));
 		}
 	}
 

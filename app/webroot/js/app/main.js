@@ -3,6 +3,7 @@ define(function (require) {
 		bootstrap = require('../bootstrap_public'),
 		bootbox = require('../bootbox.min');
 	 var moduleGobal = function() {
+
 		 $('body').on('click', '.btn-predict-remove', function(e){
 			var currentClick = $(this);
 			var predictId = $(this).attr('data-id');
@@ -23,6 +24,35 @@ define(function (require) {
 					});
 				}
 			});
+		 });
+
+		 /**deleted Item for admin**/
+		 $('body.admin').on('click', 'table a.delete', function(e){
+			 var currentTarget = $(this);
+			 var url = $(this).attr('href');
+				bootbox.dialog({
+					message: "I am a custom dialog",
+					title: "Custom title",
+					buttons: {
+						danger: {
+							label: "ลบข้อมูล!",
+							className: "btn-danger",
+							callback: function() {
+								$.getJSON(url, function(data){
+									bootbox.alert(data.json.message);
+									if (data.status) {
+										currentTarget.closest('tr').remove();
+									}
+								});
+							}
+						},
+						success: {
+							label: "ยกเลิก",
+							className: "btn-default"
+						},
+					}
+				});
+			 e.preventDefault();
 		 });
 	 }
 

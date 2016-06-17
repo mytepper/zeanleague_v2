@@ -88,7 +88,7 @@
 						</td>
 						<td>
 							<?php if ($teamsCompetition['TeamsCompetition']['date_time'] < date('Y-m-d H:i:s')) :?>
-							<button type="button" class="btn btn-default disabled"><i class="fa fa-ban"></i></button>
+							<button type="button" class="btn btn-default disabled"><i class="fa fa-lock text-danger"></i></button>
 							<?php else: ?>
 							<?php echo $this->Html->link('<i class="fa fa-futbol-o" aria-hidden="true"></i>', '/teams_competitions/predicts', array(
 								'class' => 'btn btn-success btn-xs',
